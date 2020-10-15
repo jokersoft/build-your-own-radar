@@ -1,3 +1,11 @@
+# TODO
+- Create independent build
+- PORT env
+- source env || load from local file (var << contents)
+
+
+
+
 [![Build Status](https://travis-ci.org/thoughtworks/build-your-own-radar.svg?branch=master)](https://travis-ci.org/thoughtworks/build-your-own-radar)
 [![Stars](https://badgen.net/github/stars/thoughtworks/build-your-own-radar)](https://github.com/thoughtworks/build-your-own-radar)
 [![dependencies Status](https://david-dm.org/thoughtworks/build-your-own-radar/status.svg)](https://david-dm.org/thoughtworks/build-your-own-radar)
@@ -92,7 +100,7 @@ We have released BYOR as a docker image for our users. The image is available in
 
 ```
 $ docker pull wwwthoughtworks/build-your-own-radar
-$ docker run --rm -p 8080:80 -e SERVER_NAMES="localhost 127.0.0.1" wwwthoughtworks/build-your-own-radar
+$ docker run --rm -p 8080:8080 -e SERVER_NAMES="localhost 127.0.0.1" wwwthoughtworks/build-your-own-radar -e PORT=8080
 $ open http://localhost:8080
 ```
 

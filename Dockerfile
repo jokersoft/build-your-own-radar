@@ -3,7 +3,7 @@ WORKDIR /src/build-your-own-radar
 COPY package.json ./
 RUN npm install
 COPY . ./
-ARG CSV_FILE_URL=https://tech-radar-74kt5ryjlq-ez.a.run.app/source.csv
+ARG CSV_FILE_URL=https://localhost/source.csv
 ENV CSV_FILE_URL $CSV_FILE_URL
 RUN npm run build
 
