@@ -205,8 +205,12 @@ const GoogleSheetInput = function () {
     var domainName = DomainName(window.location.search.substring(1))
     var queryString = window.location.href.match(/sheetId(.*)/)
     var queryParams = queryString ? QueryParams(queryString[0]) : {}
+    var csvFileUrl = process.env.CSV_FILE_URL || false
 
-    if (domainName && queryParams.sheetId.endsWith('csv')) {
+    if (csvFileUrl) {
+      sheet = CSVDocument(csvFileUrl)
+      sheet.init().build()
+    } else if (domainName && queryParams.sheetId.endsWith('csv')) {
       sheet = CSVDocument(queryParams.sheetId)
       sheet.init().build()
     } else if (domainName && domainName.endsWith('google.com') && queryParams.sheetId) {

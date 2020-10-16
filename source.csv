@@ -1,0 +1,9 @@
+name,ring,quadrant,isNew,description
+GCloud,adopt,platforms,FALSE,"Cloud computing services"
+php74,adopt,languages & frameworks,FALSE,"Our base BE coding language"
+Composer,adopt,tools,FALSE,"Main and only PHP dependency manager"
+Laravel 6,adopt,languages & frameworks,FALSE,"Main BE php framework"
+prooph,adopt,languages & frameworks,FALSE,"CQRS and Event Sourcing packages for PHP"
+Symfony 5,trial,languages & frameworks,TRUE,"Evaluating framework that is optimised for use in clouds"
+Canary builds,trial,techniques,FALSE,"Many projects have external code dependencies ..."
+Apache Kafka,hold,tools,TRUE,"Apache Kafka was evaluated as event storage for ES"
